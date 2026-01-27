@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --teal: #26a69a;
+  --mint: #4db6ac;
+  --ivory: #fdf5e6;
+  --coral: #ff7043;
+  --dark-teal: #0f6b63;
+  --ink: #0b1f1c;
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}

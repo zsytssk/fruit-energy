@@ -1,3 +1,4 @@
+@config "../tailwind.config.js";
 @import "tailwindcss";
 
 :root {
@@ -7,6 +8,11 @@
   --coral: #ff7043;
   --dark-teal: #0f6b63;
   --ink: #0b1f1c;
+  --spacing: 4px;
+  --color-blue-600: var(--teal);
+  --color-blue-700: var(--teal);
+  --van-switch-on-background: var(--teal);
+  --van-button-plain-background: transparent;
 }
 
 html,
@@ -16,4 +22,45 @@ body {
   place-items: center;
   width: 100vw;
   height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--ivory) 0%,
+    #ffffff 42%,
+    rgba(77, 182, 172, 0.18) 100%
+  );
+}
+
+.chip {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.text-blue-600 {
+  color: var(--teal) !important;
+}
+
+.accent-btn,
+.btn-red {
+  background: linear-gradient(135deg, var(--coral) 0%, #f4511e 100%);
+  box-shadow: 0 12px 26px rgba(255, 112, 67, 0.18);
+  border-radius: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.primary-btn,
+.btn-blue {
+  background: linear-gradient(135deg, var(--teal) 0% 0%, var(--mint) 100%);
+  box-shadow: 0 12px 26px rgba(38, 166, 154, 0.16);
+  border-radius: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-small {
+  font-size: 12px;
+  padding: 8px 12px;
+  height: auto;
+  font-weight: normal;
 }

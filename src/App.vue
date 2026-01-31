@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import Layout from "@/views/Layout/index.vue";
+import Layout from "@/Layout/index.vue";
 </script>

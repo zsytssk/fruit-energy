@@ -16,9 +16,11 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
+    "postcss-pxtorem": "^6.1.0",
     "typescript": "~5.9.3",
     "vant": "^4.9.22",
     "vite": "^7.2.4",

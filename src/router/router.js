@@ -6,6 +6,7 @@ import Batch from "@/views/Batch/Batch.vue";
 import BatchReport from "@/views/BatchReport/BatchReport.vue";
 import Compare from "@/views/Compare/Compare.vue";
 import History from "@/views/History/History.vue";
+import FruitInfo from "@/views/FruitInfo/FruitInfo.vue";
 
 const routes = [
   { path: "/", redirect: "/home" },
@@ -16,6 +17,7 @@ const routes = [
   { path: "/batch", name: "batch", component: Batch },
   { path: "/batchReport", name: "batchReport", component: BatchReport },
   { path: "/history", name: "history", component: History },
+  { path: "/fruitInfo", name: "fruitInfo", component: FruitInfo },
 ];
 
 const router = createRouter({

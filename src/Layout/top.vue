@@ -19,6 +19,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const curPageType = usePageType();
 const pageInfo = computed(() => {
+  console.log(`test:>`, curPageType.value);
   return PageIntro[curPageType.value as keyof typeof PageIntro];
 });
 </script>

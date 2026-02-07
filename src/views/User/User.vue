@@ -55,7 +55,11 @@
             <div class="text-xs text-gray-500">显示更多营养细节</div>
           </div>
           <label class="inline-flex items-center cursor-pointer">
-            <van-switch v-model="config.showDetail" size="22px" />
+            <van-switch
+              v-model="config.showDetail"
+              size="22px"
+              @change="saveCfg"
+            />
           </label>
         </div>
 
@@ -65,7 +69,11 @@
             <div class="text-xs text-gray-500">每次识别后自动保存</div>
           </div>
           <label class="inline-flex items-center cursor-pointer">
-            <van-switch v-model="config.autoSave" size="22px" />
+            <van-switch
+              v-model="config.autoSave"
+              size="22px"
+              @change="saveCfg"
+            />
           </label>
         </div>
 
@@ -75,7 +83,11 @@
             <div class="text-xs text-gray-500">展示适宜与禁忌人群</div>
           </div>
           <label class="inline-flex items-center cursor-pointer">
-            <van-switch v-model="config.showHealthTip" size="22px" />
+            <van-switch
+              v-model="config.showHealthTip"
+              size="22px"
+              @change="saveCfg"
+            />
           </label>
         </div>
       </div>
@@ -114,6 +126,10 @@ import { ref } from "vue";
 
 const navTo = useNavTo();
 const config = ref<any>({});
+
+const saveCfg = () => {
+  showToast("偏好设置已保存");
+};
 </script>
 
 <style lang="scss" scoped>

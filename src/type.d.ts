@@ -9,3 +9,33 @@ interface ImportMeta {
     [key: string]: string | boolean | undefined;
   };
 }
+
+interface NutritionItem {
+  label: string;
+  value: string;
+  color: string;
+}
+
+interface FruitInfo {
+  nutrition: NutritionItem[];
+  pickTips: string[];
+  suitableFor: string[];
+  avoidFor: string[];
+  storageDays: number;
+  grade: "S" | "A" | "B" | "C";
+  desc: string;
+}
+
+type FruitItem = FruitInfo & {
+  id: string;
+  name: string;
+  level: string;
+  reliability: number;
+  time?: number;
+  select?: boolean;
+};
+
+type CompareItem = FruitItem & {
+  time: string;
+  type: string;
+};

@@ -7,6 +7,7 @@
     label=""
     placeholder="选择品类"
     @click="showPicker = true"
+    v-bind="$attrs"
   />
   <van-popup v-model:show="showPicker" destroy-on-close round position="bottom">
     <van-picker

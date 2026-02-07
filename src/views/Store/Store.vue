@@ -15,7 +15,9 @@
       <div class="grid grid-cols-3 gap-2 mt-4">
         <div class="rounded-2xl bg-white/15 border border-white/25 p-3">
           <div class="text-xs opacity-90">今日识别</div>
-          <div id="kpiTodayScans2" class="text-lg font-semibold mt-1">0</div>
+          <div id="kpiTodayScans2" class="text-lg font-semibold mt-1">
+            {{ scanList.length }}
+          </div>
         </div>
         <div class="rounded-2xl bg-white/15 border border-white/25 p-3">
           <div class="text-xs opacity-90">已保存</div>
@@ -29,24 +31,27 @@
     </div>
     <div class="flex items-center justify-between mt-1">
       <div class="text-sm font-semibold text-gray-900">最近识别</div>
-      <van-button
-        plain
-        class="text-xs text-blue-600"
-        @click="showToast('已清空所有记录')"
-      >
+      <van-button plain class="text-xs text-blue-600" @click="scanStore.clear">
         清空全部
       </van-button>
     </div>
-    <empty-record />
+    <scan-list v-if="scanList.length" />
+    <empty-record v-else />
   </div>
 </template>
 
 <script setup lang="ts">
 import EmptyRecord from "@/components/EmptyRecord/EmptyRecord.vue";
+import ScanList from "@/components/ScanList/ScanList.vue";
 import { useNavTo } from "@/hooks/useNavTo";
+import { useScanListStore } from "@/store/scanList";
+import { storeToRefs } from "pinia";
 import { showToast } from "vant";
 import { ref } from "vue";
 
+const scanStore = useScanListStore();
+
+const { list: scanList } = storeToRefs(scanStore);
 const navTo = useNavTo();
 const config = ref<any>({});
 </script>

@@ -31,4 +31,8 @@ export const PageIntro = {
     title: "历史报告",
     intro: "学习记录复盘（演示）",
   },
+  fruitInfo: {
+    title: "水果知识卡",
+    intro: "营养、挑选、宜忌全知道",
+  },
 };

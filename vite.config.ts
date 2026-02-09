@@ -12,6 +12,7 @@ export default ({ mode }: ConfigEnv) => {
   const env = loadEnv(mode, process.cwd());
 
   return {
+    base: "./",
     css: {
       postcss: {
         plugins: [
